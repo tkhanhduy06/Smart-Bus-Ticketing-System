@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chọn ghế - Smart Bus</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Chọn ghế</h1>
+
+        <p class="subtitle">
+            Vui lòng chọn ghế bạn muốn sử dụng
+        </p>
+
+        <!-- Chú thích trạng thái ghế -->
+        <div class="legend">
+
+            <div class="legend-item">
+                <span class="seat-icon available"></span>
+                <span>Ghế trống</span>
+            </div>
+
+            <div class="legend-item">
+                <span class="seat-icon selected"></span>
+                <span>Ghế đã chọn</span>
+            </div>
+
+            <div class="legend-item">
+                <span class="seat-icon occupied"></span>
+                <span>Ghế đã đặt</span>
+            </div>
+
+        </div>
+
+        <!-- Khu vực chọn ghế -->
+        <div class="bus">
+
+            <div class="bus-front">
+                ĐẦU XE
+            </div>
+
+            <div class="driver">
+                TÀI XẾ
+            </div>
+
+            <div id="seat-map" class="seat-map">
+
+                <!-- Hàng 1 -->
+                <div class="seat-row">
+
+                    <button class="seat"
+                            data-seat="A01">
+                        A01
+                    </button>
+
+                    <button class="seat"
+                            data-seat="A02">
+                        A02
+                    </button>
+
+                    <div class="aisle"></div>
+
+                    <button class="seat"
+                            data-seat="A03">
+                        A03
+                    </button>
+
+                    <button class="seat"
+                            data-seat="A04">
+                        A04
+                    </button>
+
+                </div>
+
+                <!-- Hàng 2 -->
+                <div class="seat-row">
+
+                    <button class="seat"
+                            data-seat="A05">
+                        A05
+                    </button>
+
+                    <button class="seat"
+                            data-seat="A06">
+                        A06
+                    </button>
+
+                    <div class="aisle"></div>
+
+                    <button class="seat"
+                            data-seat="A07">
+                        A07
+                    </button>
+
+                    <button class="seat occupied"
+                            data-seat="A08"
+                            disabled>
+                        A08
+                    </button>
+
+                </div>
+
+                <!-- Hàng 3 -->
+                <div class="seat-row">
+
+                    <button class="seat"
+                            data-seat="A09">
+                        A09
+                    </button>
+
+                    <button class="seat occupied"
+                            data-seat="A10"
+                            disabled>
+                        A10
+                    </button>
+
+                    <div class="aisle"></div>
+
+                    <button class="seat"
+                            data-seat="A11">
+                        A11
+                    </button>
+
+                    <button class="seat"
+                            data-seat="A12">
+                        A12
+                    </button>
+
+                </div>
+
+                <!-- Hàng 4 -->
+                <div class="seat-row">
+
+                    <button class="seat"
+                            data-seat="B01">
+                        B01
+                    </button>
+
+                    <button class="seat"
+                            data-seat="B02">
+                        B02
+                    </button>
+
+                    <div class="aisle"></div>
+
+                    <button class="seat occupied"
+                            data-seat="B03"
+                            disabled>
+                        B03
+                    </button>
+
+                    <button class="seat"
+                            data-seat="B04">
+                        B04
+                    </button>
+
+                </div>
+
+                <!-- Hàng 5 -->
+                <div class="seat-row">
+
+                    <button class="seat"
+                            data-seat="B05">
+                        B05
+                    </button>
+
+                    <button class="seat"
+                            data-seat="B06">
+                        B06
+                    </button>
+
+                    <div class="aisle"></div>
+
+                    <button class="seat"
+                            data-seat="B07">
+                        B07
+                    </button>
+
+                    <button class="seat"
+                            data-seat="B08">
+                        B08
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="bus-back">
+                CUỐI XE
+            </div>
+
+        </div>
+
+        <!-- Thông tin ghế -->
+        <div class="booking-summary">
+
+            <h2>Thông tin lựa chọn</h2>
+
+            <p>
+                Ghế đã chọn:
+                <strong id="selected-seats">Chưa chọn</strong>
+            </p>
+
+            <p>
+                Số lượng:
+                <strong id="selected-count">0</strong>
+                ghế
+            </p>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
